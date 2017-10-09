@@ -66,7 +66,7 @@ public class Course {
     
     public void printModules(){
         Modules.stream().forEach((m) -> {
-            System.out.println("Module Name: " + m.getModuleName() + " " + "Module ID: " + m.getModuleID() );
+            System.out.println("Module Name: " + m.getModuleName() + " " + "Module ID: " + m.getModuleID() + "" );
         });
     }
 }
