@@ -12,11 +12,13 @@ import org.joda.time.DateTime;
  * @author Padraig
  */
 public class Course {
+    //Variables regarding information about the course
     private String CourseName;
     private ArrayList<Module> Modules;
     private DateTime StartDate;
     private DateTime EndDate;
     
+    //Course Constructor
     public Course(String CourseName,  DateTime StartDate, DateTime EndDate){
         this.Modules = new ArrayList<Module>();
         this.CourseName = CourseName;
@@ -24,6 +26,7 @@ public class Course {
         this.EndDate = EndDate;
     }
 
+    //My various setters and getters
     public void setCourseName(String CourseName) {
         this.CourseName = CourseName;
     }
@@ -56,6 +59,7 @@ public class Course {
         return EndDate;
     }
     
+    //This adds each Module to the Course. This is called in the main class App
     public boolean addModule(Module module){
         if (module==null || Modules.contains(module)) {
             return false;
@@ -64,6 +68,7 @@ public class Course {
         return true;
     }
     
+    //This is what I use to print off the module information
     public void printModules(){
         Modules.stream().forEach((m) -> {
             System.out.println("Module Name: " + m.getModuleName() + " " + "Module ID: " + m.getModuleID() + "" );

@@ -11,12 +11,14 @@ package College;
  * @author Padraig
  */
 public class Student {
+    //Variables regarding the information of the students
     private int age;
     private String name;
     private String username;
     private int ID;
     private String DOB;
     
+    //Student Constructor
     public Student(int age, String name, String username, int ID, String DOB){
         this.age = age;
         this.name = name;
@@ -25,6 +27,7 @@ public class Student {
         this.DOB = DOB;
     }
 
+    //My setters and getters
     public void setAge(int age) {
         this.age = age;
     }
